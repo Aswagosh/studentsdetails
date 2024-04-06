@@ -24,6 +24,10 @@ app.post("/submit",async(req,res)=>{
     let result=await student.save()
     res.json({"Status":"Success"})
 })
+app.post("/viewall",async (req,res)=>{
+    let result =await studentsModel.find()
+    res.json(result)
+})
 
 
 
