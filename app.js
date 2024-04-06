@@ -33,6 +33,11 @@ app.post("/delete",async(req,res)=>{
     let result=await studentsModel.deleteOne(input)
     res.json({"Status":"Success"})
 })
+app.post("/search",async(req,res)=>{
+    let input=req.body
+    let result=await studentsModel.find(input)
+    res.json(result)
+})
 
 
 
